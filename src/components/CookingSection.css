@@ -1,0 +1,95 @@
+/* Cooking Section Styles */
+.cooking-section {
+  background-color: var(--color-charcoal);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(6rem, 10vw, 10rem) 1.5rem;
+}
+
+.cooking-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.cooking-visual-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 200, 87, 0.2);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(230, 64, 50, 0.15);
+}
+
+.cooking-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.cooking-visual-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(23, 21, 18, 0.85);
+  border: 1px solid rgba(255, 200, 87, 0.3);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-yellow);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(10px);
+}
+
+.cooking-stats-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.cooking-stat-box {
+  background: rgba(255, 245, 232, 0.03);
+  border: 1px solid rgba(255, 245, 232, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  text-align: left;
+}
+
+.cooking-stat-val {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  font-weight: 900;
+  color: var(--color-orange);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.cooking-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.cooking-stat-unit {
+  font-size: 0.75rem;
+  color: var(--color-cream-muted);
+}
+
+@media (max-width: 900px) {
+  .cooking-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .cooking-stats-list {
+    grid-template-columns: 1fr;
+  }
+}

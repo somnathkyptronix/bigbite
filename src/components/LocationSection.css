@@ -1,0 +1,116 @@
+/* Location Section Styles */
+.location-section {
+  background-color: var(--color-charcoal);
+  border-top: 1px solid rgba(255, 245, 232, 0.05);
+  position: relative;
+}
+
+.location-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 5rem);
+  align-items: flex-start;
+}
+
+.location-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 200, 87, 0.1);
+  border: 1px solid rgba(255, 200, 87, 0.3);
+  color: var(--color-yellow);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 2rem;
+}
+
+.status-dot-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-yellow);
+  box-shadow: 0 0 10px var(--color-yellow);
+}
+
+.schedule-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.schedule-card {
+  background: var(--color-charcoal-card);
+  border: 1px solid rgba(255, 245, 232, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  transition: border-color var(--transition-fast);
+}
+
+.schedule-card:hover {
+  border-color: rgba(255, 200, 87, 0.3);
+}
+
+.schedule-day {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-cream);
+  margin-bottom: 0.25rem;
+}
+
+.schedule-spot {
+  font-size: 0.9375rem;
+  color: var(--color-cream-muted);
+}
+
+.schedule-time {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-yellow);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.contact-box {
+  background: var(--color-charcoal-card);
+  border: 1px solid rgba(255, 245, 232, 0.08);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-cream);
+  font-size: 1.0625rem;
+}
+
+.contact-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 245, 232, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-yellow);
+}
+
+@media (max-width: 900px) {
+  .location-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
